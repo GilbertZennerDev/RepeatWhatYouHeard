@@ -1,0 +1,44 @@
+**1. Grundrechenarten-Pyramide:** Berechne das Ergebnis der folgenden einfachen Terme:
+* $5 + 8 - 3 =$
+* $12 \cdot 2 / 4 =$
+* $9 - (4 + 1) =$
+**=END=**
+
+**2. Runden auf Zehner:** Runde die folgenden drei Zahlen auf den **nächstgelegenen Zehner**:
+* $43$
+* $78$
+* $155$
+**=END=**
+
+**3. Flächen und Umfang des Quadrats:** Ein Quadrat hat eine Seitenlänge von $6\text{ cm}$. Berechne seinen **Umfang** und seine **Fläche**.
+**=END=**
+
+**4. Bruchteile bestimmen:** Zeichne einen Kreis und teile ihn in vier gleich große Teile. Färbe einen Teil davon ein. Gib den **Bruchteil** des gefärbten Bereichs an. 
+**=END=**
+
+**5. Zeitspannen-Rechnen:** Du startest um $14:30\text{ Uhr}$ mit deinen Hausaufgaben und brauchst $50$ Minuten. Wie spät ist es, wenn du fertig bist?
+**=END=**
+
+**6. Zahlenstrahl-Abstand:** Welche Zahl liegt genau in der Mitte zwischen $20$ und $50$ auf dem Zahlenstrahl?
+**=END=**
+
+**7. Größer, Kleiner, Gleich:** Setze das korrekte Zeichen ($<$, $>$, $=$) zwischen die Zahlenpaare:
+* $1/2$ \_\_\_\_\_ $0,4$
+* $3 \cdot 5$ \_\_\_\_\_ $20 - 5$
+* $100$ \_\_\_\_\_ $99 + 2$
+**=END=**
+
+**8. Zweier-Potenz:** Gib das Ergebnis für die folgenden drei Potenzen an:
+* $2^3 =$
+* $2^1 =$
+* $2^5 =$
+**=END=**
+
+**9. Textaufgabe mit Multiplikation:** Eine Packung Gummibärchen enthält $12$ Stück. Du kaufst $5$ Packungen. Wie viele Gummibärchen hast du insgesamt?
+**=END=**
+
+**10. Dezimal-Brüche:** Schreibe die folgenden Dezimalzahlen als **gewöhnliche Brüche** (muss nicht gekürzt werden):
+* $0,7$
+* $0,25$
+* $1,5$
+**=END=**

@@ -1,0 +1,32 @@
+**1. Quadratische Gleichung:** Löse die folgende quadratische Gleichung mit Hilfe der $pq$-Formel oder der Mitternachtsformel:
+$$x^2 - 6x + 5 = 0$$
+**=END=**
+
+**2. Ableitung einer Funktion:** Bestimme die **erste Ableitung** $f'(x)$ der Funktion $f(x) = 2x^3 - 4x^2 + 5x - 1$.
+**=END=**
+
+**3. Vektor-Skalarprodukt:** Gegeben sind die Vektoren $\vec{a} = \begin{pmatrix} 2 \\ 1 \\ 3 \end{pmatrix}$ und $\vec{b} = \begin{pmatrix} -1 \\ 4 \\ 0 \end{pmatrix}$. Berechne das **Skalarprodukt** $\vec{a} \cdot \vec{b}$.
+**=END=**
+
+**4. Binomialkoeffizient:** Berechne den **Binomialkoeffizienten** $\binom{6}{2}$.
+**=END=**
+
+**5. Integral einer Funktion:** Berechne den Wert des **bestimmten Integrals** im Intervall $[1, 2]$ für die Funktion $f(x) = 3x^2$:
+$$\int_{1}^{2} 3x^2 dx$$
+**=END=**
+
+**6. Logarithmus-Gesetz:** Vereinfache den folgenden Ausdruck unter Anwendung der Logarithmusgesetze:
+$$\log_2(8) + \log_2(4)$$
+**=END=**
+
+**7. Gleichung der Kreislinie:** Gib die **Gleichung der Kreislinie** mit dem Mittelpunkt $M(2 | -3)$ und dem Radius $r=4$ an. 
+**=END=**
+
+**8. Wahrscheinlichkeit ohne Zurücklegen:** In einer Urne sind $3$ rote und $7$ blaue Kugeln. Es werden **zwei Kugeln ohne Zurücklegen** gezogen. Wie groß ist die Wahrscheinlichkeit, dass beide Kugeln **rot** sind?
+**=END=**
+
+**9. Nullstelle einer Exponentialfunktion:** Bestimme die **Nullstelle** der Funktion $f(x) = 5 \cdot e^{2x} - 5$.
+**=END=**
+
+**10. Parameterform der Geraden:** Eine Gerade $g$ verläuft durch den Punkt $P(1|2|3)$ und ist parallel zum Vektor $\vec{v} = \begin{pmatrix} 4 \\ 0 \\ -1 \end{pmatrix}$. Gib die **Parameterform** dieser Geraden an.
+**=END=**
