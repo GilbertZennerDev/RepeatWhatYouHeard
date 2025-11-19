@@ -47,46 +47,22 @@ def PrintRiddle(task):
 
 def show_form(task):
     if 'sum' not in st.session_state: st.session_state.sum = ''
-    if 'selected_option' not in st.session_state: st.session_state.selected_option = ''
-    if 'good_option' not in st.session_state: st.session_state.good_option = ''
     col1,col2 = st.columns(2)
     col1.title('Sum:')
-    if isinstance(st.session_state.sum, bool):
-        col2.title(f'Result: {st.session_state.sum}')
-
-    ####
-
-    st.write('task:', task)
-    parts = task.split('/')
-    st.write('debug parts', parts)
-    options = parts[1].split('.')
-    good_option = options[-1]
-    st.write('options:', options, '\ngood option:', good_option)
-    st.session_state.good_option = good_option
-    display_options = options[:]
-    r.shuffle(display_options)
-    selected_option = ''
-    ####
+    if isinstance(st.session_state.sum, str): col2.title(f'Result: {st.session_state.sum}')
 
     with st.form('addition'):
         parts = task.split('/')
         st.write('debug parts', parts)
         options = parts[1].split('.')
-        good_option = options[-1]
-        st.write('options:', options, '\ngood option:', good_option)
+        good_option = parts[-1]
+        display_options = options[:]
         selected_option = st.selectbox(parts[0], options=display_options, index=2)
-        st.write('selected_option:', selected_option, '\ngood_option:', good_option)
-        st.session_state.selected_option = selected_option
-        a = st.text_input('a')
-        b = st.text_input('b')
+        #selected_option = st.text_input(f'Options:{display_options}')
         submit = st.form_submit_button('Check')
 
-    # The value of st.session_state.sum is updated at the end of the script rerun,
-    # so the displayed value at the top in col2 does not show the new sum. Trigger
-    # a second rerun when the form is submitted to update the value above.
-    st.session_state.sum = a == b#selected_option.strip() == good_option.strip()#a == b#
-    if submit:
-        st.rerun()
+    st.session_state.sum = f'You say: {selected_option}:{selected_option.strip() == good_option.strip()}'
+    if submit: st.rerun()
 
 def PrintTasks(subjects):
     level = str(st.slider('Waehle das Level aus:', 1, 3))
@@ -94,9 +70,7 @@ def PrintTasks(subjects):
     subject = st.selectbox(label="Waehle das Fach: ", options=subjects, index=1)
     Tasks = CleanTasks(ReadSubjectFile(subject, level))
     if Tasks == None: st.error("File not found"); exit()
-    #tasks = XTasks(Tasks, amount)
-    task = Tasks[0]
-    #for task in tasks: 
+    task = XTasks(Tasks, 1)[0]
     show_form(task)
 
 def run(name, level, subjects):

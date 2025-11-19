@@ -1,10 +1,10 @@
-1.  We x fast./walk.crawl.run/**=END=**
-2.  X - Children/Childies.Chillies.Children/=END=**
-3.  The sun X./glaring.burning.is shining/**=END=**
-4.  She X happy./was.will be.is/**=END=**
-5.  I saw a X dog./small.huge.big/**=END=**
-6.  Do you like X?/hotdog.bunny.pizza/**=END=**
-7.  The book is X the table./besides.under.on/**=EN
-8.  X you like coffee?/hate.want.Do/**=END=**
-9.  X car./My.Your.John's/**=END=**
-10. I X toast./want.see.ate/**=END=**
+1.  We x fast./walk.crawl.run/run**=END=**
+2.  X - Children/Childies.Chillies.Children/Children**=END=**
+3.  The sun is X./glaring.burning.shining/shining**=END=**
+4.  She X happy./was.will be.is/is**=END=**
+5.  I saw a X dog./small.huge.big/big**=END=**
+6.  Do you like X?/hotdog.bunny.pizza/pizza**=END=**
+7.  The book is X the table./besides.under.on/on**=EN
+8.  X you like coffee?/hate.want.Do/Do**=END=**
+9.  X car./My.Your.John's/John's**=END=**
+10. I X toast./want.see.ate/ate**=END=**
