@@ -76,20 +76,22 @@ def checkTask(task):
     options = parts[1].split('.')
     good_option = parts[-1]
     good_phrase = parts[0].replace('X', good_option)
-    st.session_state.good_phrase = good_phrase
+    st.session_state['good_phrase'] = good_phrase
     st.write('debug good phrase', good_phrase)
-    st.session_state.selected_option = st.text_input(parts[0])
-
-def PrintTasks(subjects):
+    st.session_state['selected_option'] = st.text_input(parts[0])
     if 'selected_option' in st.session_state and 'good_phrase' in st.session_state:
         st.write("Check", st.session_state.selected_option, ';', st.session_state.good_phrase)
+    #if st.success("GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOD")
+
+def PrintTasks(subjects):
+    
     level = str(st.slider('Waehle das Level aus:', 1, 3))
     amount = st.slider('Waehle wieviele Aufgaben:', 1, 10)
     subject = st.selectbox(label="Waehle das Fach: ", options=subjects, index=1)
     Tasks = CleanTasks(ReadSubjectFile(subject, level))
     if Tasks == None: st.error("File not found"); exit()
     task = XTasks(Tasks, 1)[0]
-    checkTask(task)
+    show_form(task)
 
 def run(name, level, subjects):
     st.header("Repeat what you heard")
