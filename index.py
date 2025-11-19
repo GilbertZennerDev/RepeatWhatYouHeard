@@ -46,12 +46,13 @@ def PrintRiddle(task):
     #except Exception as e: print(e); return
 
 def show_form(task):
-    if 'sum' not in st.session_state: st.session_state.sum = ''
+    if not task: return
+    if 'word' not in st.session_state: st.session_state.word = ''
     col1,col2 = st.columns(2)
-    col1.title('Sum:')
-    if isinstance(st.session_state.sum, str): col2.title(f'Result: {st.session_state.sum}')
+    col1.title('Word:')
+    if isinstance(st.session_state.word, str): col2.title(f'Result: {st.session_state.word}')
 
-    with st.form('addition'):
+    with st.form('Fill in the gap'):
         parts = task.split('/')
         st.write('debug parts', parts)
         options = parts[1].split('.')
@@ -61,17 +62,34 @@ def show_form(task):
         #selected_option = st.text_input(f'Options:{display_options}')
         submit = st.form_submit_button('Check')
 
-    st.session_state.sum = f'You say: {selected_option}:{selected_option.strip() == good_option.strip()}'
+    st.session_state.word = f'You say: {selected_option}:{selected_option.strip() == good_option.strip()}'
     if submit: st.rerun()
 
+'''
+I change my strategy. The user should write the entire phrase into the text_input. Then I just compare.
+I am tired of this Forms mess.
+'''
+
+def checkTask(task):
+    parts = task.split('/')
+    st.write('debug parts', parts)
+    options = parts[1].split('.')
+    good_option = parts[-1]
+    good_phrase = parts[0].replace('X', good_option)
+    st.session_state.good_phrase = good_phrase
+    st.write('debug good phrase', good_phrase)
+    st.session_state.selected_option = st.text_input(parts[0])
+
 def PrintTasks(subjects):
+    if 'selected_option' in st.session_state and 'good_phrase' in st.session_state:
+        st.write("Check", st.session_state.selected_option, ';', st.session_state.good_phrase)
     level = str(st.slider('Waehle das Level aus:', 1, 3))
     amount = st.slider('Waehle wieviele Aufgaben:', 1, 10)
     subject = st.selectbox(label="Waehle das Fach: ", options=subjects, index=1)
     Tasks = CleanTasks(ReadSubjectFile(subject, level))
     if Tasks == None: st.error("File not found"); exit()
     task = XTasks(Tasks, 1)[0]
-    show_form(task)
+    checkTask(task)
 
 def run(name, level, subjects):
     st.header("Repeat what you heard")
